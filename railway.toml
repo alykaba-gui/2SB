@@ -3,23 +3,3 @@ builder = "nixpacks"
 
 [deploy]
 startCommand = "npm start"
-restartPolicyType = "ON_FAILURE"
-
-[[services]]
-name = "web"
-$default = true
-
-[services.env]
-NODE_ENV = "production"
-
-[services.source]
-path = "."
-
-[services.build]
-command = "npm install"
-
-[services.deploy]
-startCommand = "npm start"
-
-[services.ports]
-http = 3000
