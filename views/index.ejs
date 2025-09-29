@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<%-include('head') %>
+
+  <body class="min-h-screen bg-white">
+    <!-- header -->
+    <%-include('header') %>
+
+      <!-- Hero Section -->
+      <section id="accueil" class="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white">
+        <div class="absolute inset-0 bg-black opacity-20"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+          <div class="text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight animated">
+              2SB SARL - Votre Partenaire
+              <span class="block text-orange-400">BTP de Confiance</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto leading-relaxed">
+              Location de véhicules, construction de bâtiments et travaux publics.
+              Plus de 10 ans d'expertise au service de vos projets.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <button onclick="scrollToSection('services')"
+                class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors transform hover:scale-105 flex items-center justify-center">
+                Découvrir nos Services
+                <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                  </path>
+                </svg>
+              </button>
+              <button onclick="scrollToSection('contact')"
+                class="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
+                Contactez nous
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Section -->
+      <section class="bg-gray-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="text-center">
+              <div class="text-3xl md:text-4xl font-bold text-blue-700 mb-2">10+</div>
+              <div class="text-gray-600 font-medium">Années d'expérience</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl md:text-4xl font-bold text-blue-700 mb-2">100+</div>
+              <div class="text-gray-600 font-medium">Projets réalisés</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl md:text-4xl font-bold text-blue-700 mb-2">20+</div>
+              <div class="text-gray-600 font-medium">Véhicules et Camions disponibles</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl md:text-4xl font-bold text-blue-700 mb-2 animated">24/7</div>
+              <div class="text-gray-600 font-medium">Support client</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <%-include('service')%>
+        <%-include('about')%>
+          <%-include('components')%>
+            <%-include('contact')%>
+              <%-include('footer')%>
+
+
+                <script src="/css/js/script.js"></script>
+  </body>
+
+</html>
