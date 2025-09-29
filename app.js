@@ -29,7 +29,7 @@ try {
 }
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST || "smtp.gmail.com",
-  port: process.env.SMTP_PORT || 587,
+  port: process.env.SMTP_PORT || 465,
   secure: false, // true pour 465, false pour autres ports
   service: "gmail",
   auth: {
