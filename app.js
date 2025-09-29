@@ -36,6 +36,11 @@ const transporter = nodemailer.createTransport({
     user: "alykaba3006@gmail.com",
     pass: "mfkewfzzjppfrssr",
   },
+  connectionTimeout: 30000,
+  socketTimeout: 30000,
+  // Réessayer en cas d'échec
+  retries: 3,
+  delayBetweenRetries: 1000,
 });
 
 // Vérification de la connexion
