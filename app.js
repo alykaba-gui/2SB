@@ -3,15 +3,14 @@ const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const http = require("http");
 const cors = require("cors");
-const helmet = require("helmet");
 require("dotenv").config();
 const app = express();
 const server = http.createServer(app);
 const path = require("path");
 const { log } = require("console");
 app.use(cors());
-app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "ejs");
 
 // Spécifier le doissier contenant les fichiers statics
 app.use(express.static("./public"));
@@ -24,7 +23,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 
 try {
-  app.use("/", require("../routers/index.router"));
+  app.use("/", require("./routers/index.router"));
 } catch (err) {
   console.log(err);
 }
@@ -104,6 +103,6 @@ app.post("/sendMail", async (req, res) => {
   }
 });
 
-module.exports = (req, res) => {
-  app(req, res);
-};
+app.listen(process.env.PORT, () => {
+  console.log(`Server started on http://localhost:${process.env.PORT}`);
+});
