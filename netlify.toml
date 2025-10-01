@@ -1,22 +1,16 @@
-
-
-
-
 [build]
   command = "npm install"
   publish = "public"
+  functions = "netlify/functions"
 
 [[redirects]]
   from = "/*"
   to = "/.netlify/functions/server/:splat"
   status = 200
 
-
 [functions]
+  node_bundle = true
+  external_node_modules = ["ejs"]
 
-    [functions.node_bundle]
-    external_node_modules = [
-      "module-one",
-      "module-two"
-    ]
-    timeout = 30  
+[build.environment]
+  NODE_ENV = "production"
