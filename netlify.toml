@@ -9,7 +9,8 @@
   status = 200
 
 [functions]
-  node_bundle = true
+
+  [functions.node_bundle]
   external_node_modules = ["ejs"]
 
 [build.environment]
