@@ -111,6 +111,7 @@ app.post("/sendMail", async (req, res) => {
   }
 });
 
-app.listen(process.env.PORT, () => {
+i; /*app.listen(process.env.PORT, () => {
   console.log(`Server started on http://localhost:${process.env.PORT}`);
-});
+});*/
+module.exports = app;
