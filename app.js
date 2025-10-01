@@ -13,7 +13,8 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 // Spécifier le doissier contenant les fichiers statics
-app.use(express.static("./public"));
+//app.use(express.static("./public"));
+app.use(express.static(path.join(process.cwd(), "public")));
 app.use(
   express.urlencoded({
     extended: true,
@@ -111,7 +112,7 @@ app.post("/sendMail", async (req, res) => {
   }
 });
 
-i; /*app.listen(process.env.PORT, () => {
+/*app.listen(process.env.PORT, () => {
   console.log(`Server started on http://localhost:${process.env.PORT}`);
 });*/
 module.exports = app;
