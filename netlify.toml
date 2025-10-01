@@ -1,5 +1,9 @@
+
+
+
+
 [build]
-  command = "npm install"
+  command = "npm install ejs --save && npm install"
   publish = "public"
   functions = "netlify/functions"
 
