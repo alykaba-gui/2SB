@@ -28,9 +28,9 @@ try {
   console.log(err);
 }
 const transporter = nodemailer.createTransport({
-  /* host: process.env.SMTP_HOST || "smtp.gmail.com",
+  host: process.env.SMTP_HOST || "smtp.gmail.com",
   port: process.env.SMTP_PORT || 587,
-  secure: false, // true pour 465, false pour autres ports*/
+  secure: false, // true pour 465, false pour autres ports
   service: "gmail",
   auth: {
     user: "alykaba3006@gmail.com",
