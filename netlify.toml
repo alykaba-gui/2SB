@@ -1,7 +1,7 @@
 
 [build]
   command = "npm install ejs --save && npm install && npm run build"
-  publish = "build"
+  publish = "public"
   functions = "netlify/functions"
 
 [[redirects]]
