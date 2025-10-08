@@ -1,11 +1,9 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
-const http = require("http");
 const cors = require("cors");
 require("dotenv").config();
 const app = express();
-const server = http.createServer(app);
 const path = require("path");
 const { log } = require("console");
 app.use(cors());
